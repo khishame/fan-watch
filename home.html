@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-image: url('img/616945.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+
+        .header .sign-in {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #ffcc00;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        
+        #menu_toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 8px;
+            margin: 0;
+            padding: 10px 0;
+            list-style: none;
+            min-width: 160px;
+        }
+
+        .nav li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+ 
+        #menu_toggle:checked ~ .nav {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <button class="sign-in">Sign in</button>
+
+        <input type="checkbox" id="menu_toggle">
+        <label for="menu_toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/request.html">Request</a></li>
+            <li><a href="/discord.html">Discord</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
